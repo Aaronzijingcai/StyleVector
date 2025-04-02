@@ -1,0 +1,29 @@
+nohup: ignoring input
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.20s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.85s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.20s/it]
+
+Generating personalized review:   0%|          | 0/10 [00:00<?, ?it/s]/home/caizijing/miniconda3/envs/ai/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/caizijing/miniconda3/envs/ai/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/home/caizijing/StyleVector/style_personalized.py:96: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  style_vector_tensor = torch.tensor(alpha * style_vector, dtype=model.dtype).to(device)
+
+Generating personalized review:  10%|█         | 1/10 [2:50:21<25:33:13, 10221.46s/it]
+Generating personalized review:  20%|██        | 2/10 [2:55:10<9:43:49, 4378.68s/it]  
+Generating personalized review:  30%|███       | 3/10 [3:10:16<5:25:53, 2793.31s/it]
+Generating personalized review:  40%|████      | 4/10 [3:14:54<3:00:01, 1800.28s/it]
+Generating personalized review:  50%|█████     | 5/10 [3:23:32<1:51:29, 1337.87s/it]
+Generating personalized review:  60%|██████    | 6/10 [3:35:05<1:14:33, 1118.34s/it]
+Generating personalized review:  70%|███████   | 7/10 [3:46:45<49:05, 981.68s/it]   
+Generating personalized review:  80%|████████  | 8/10 [3:52:43<26:06, 783.17s/it]
+Generating personalized review:  90%|█████████ | 9/10 [4:22:25<18:15, 1095.34s/it]
+Generating personalized review: 100%|██████████| 10/10 [4:29:14<00:00, 883.59s/it]
+Generating personalized review: 100%|██████████| 10/10 [4:29:14<00:00, 1615.47s/it]
+结果已保存到 stylevector_results.txt
+
+Average ROUGE-L: 0.1345
+Average METEOR: 0.1541

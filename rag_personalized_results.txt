@@ -1,0 +1,2 @@
+Average ROUGE-L: 0.1341
+Average METEOR: 0.1237
