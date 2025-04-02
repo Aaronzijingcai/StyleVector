@@ -77,7 +77,7 @@ def compute_style_vector(user_history, layer_idx=20):
         with torch.no_grad():
             inputs = tokenizer(positive_input, return_tensors="pt").to(device)
             outputs = model(**inputs, output_hidden_states=True)
-            positive_hidden = outputs.hidden_states[layer_idx][0, :, :].mean(dim=0).cpu().numpy()
+            positive_hidden = outputs.hidden_states[layer_idx][0, -1, :].cpu().numpy()
             positive_activations.append(positive_hidden)
 
             # positive_all_hidden = outputs.hidden_states[layer_idx][0, :, :].mean(dim=0).cpu().numpy()
@@ -88,7 +88,7 @@ def compute_style_vector(user_history, layer_idx=20):
 
             inputs = tokenizer(negative_input, return_tensors="pt").to(device)
             outputs = model(**inputs, output_hidden_states=True)
-            negative_hidden = outputs.hidden_states[layer_idx][0, :, :].mean(dim=0).cpu().numpy()
+            negative_hidden = outputs.hidden_states[layer_idx][0, -1, :].cpu().numpy()
             negative_activations.append(negative_hidden)
 
             # negative_all_hidden = outputs.hidden_states[layer_idx][0, :, :].mean(dim=0).cpu().numpy()
